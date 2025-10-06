@@ -1,0 +1,25 @@
+{
+  "name": "car-render",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "less": "^4.4.1",
+    "minimist": "^1.2.8",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^8.29.0",
+    "@babylonjs/loaders": "^8.29.0",
+    "mitt": "^3.0.1"
+  }
+}
