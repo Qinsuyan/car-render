@@ -1,4 +1,4 @@
-import type { AbstractMesh, Scene, TransformNode } from "@babylonjs/core";
+import type { AbstractMesh, Scene, TransformNode, Vector3 } from "@babylonjs/core";
 
 export interface RendererOption {
   path: string;
@@ -11,6 +11,9 @@ export interface CarRenderOptions extends RendererOption {
   wheelSizeInInch?: number;
   head: DirectionByAxis;
   scale?: number;
+}
+export interface SceneRenderOptions extends RendererOption {
+offset?:Vector3
 }
 export interface CarMeshParts {
   wheels: (AbstractMesh | TransformNode)[];

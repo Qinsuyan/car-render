@@ -1,4 +1,4 @@
-import type { CarRenderOptions } from "@/types/renderer";
+import type { CarRenderOptions, SceneRenderOptions } from "@/types/renderer";
 import {
   ArcRotateCamera,
   Engine,
@@ -119,11 +119,11 @@ export default class CarRender {
       }
     );
   }
-  public async loadScene(path: string, offset?: Vector3) {
-    const model = await renderGLB.call(this, { path });
-    if (offset) {
+  public async loadScene(options:SceneRenderOptions) {
+    const model = await renderGLB.call(this, options);
+    if (options.offset) {
       model.meshes[0]!.setAbsolutePosition(
-        model.meshes[0]!.position.add(offset)
+        model.meshes[0]!.position.add(options.offset)
       );
     }
     model.meshes.forEach((m) => {
